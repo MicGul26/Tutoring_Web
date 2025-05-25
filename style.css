@@ -7,10 +7,11 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* warm orange/red gradient */
-  color: #4b2e05; /* dark warm brown */
+  background: linear-gradient(135deg, #f97358, #f0a46f, #f2c36b);
+  color: #4b2e05;
   min-height: 100vh;
   overflow-x: hidden;
+  background-attachment: fixed;
 }
 
 /* Navbar */
@@ -21,7 +22,7 @@ body {
   padding: 1.2rem 2rem;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.85);
-  border-bottom: 1px solid #e0b089;
+  border-bottom: 1px solid #e3905a;
   position: fixed;
   width: 100%;
   top: 0;
@@ -31,19 +32,19 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #662e00;
+  color: #7e2f00;
 }
 
 .nav-links a {
   margin-left: 2rem;
-  color: #662e00;
+  color: #7e2f00;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #a0522d;
+  color: #b35000;
 }
 
 /* Hero */
@@ -54,7 +55,8 @@ body {
   height: 100vh;
   padding-top: 80px;
   text-align: center;
-  background: transparent;
+  background: linear-gradient(135deg, #f97358, #f0a46f);
+  color: #fff3e6;
 }
 
 .hero-text {
@@ -66,32 +68,32 @@ body {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #fff3e6;
-  text-shadow: 1px 1px 4px #a0522d;
+  text-shadow: 1px 1px 5px #a04000;
 }
 
 .hero-text p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   margin-bottom: 2rem;
-  color: #ffe4c4;
-  text-shadow: 1px 1px 3px #7a401f;
+  text-shadow: 1px 1px 3px #a04000;
 }
 
 button {
   padding: 0.8rem 2rem;
   font-size: 1rem;
-  background: #a0522d;
+  background: #7e2f00;
   color: #fff3e6;
   border: none;
   border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
   transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 5px 15px rgba(126, 47, 0, 0.6);
 }
 
 button:hover {
-  background: #7a401f;
+  background: #b35000;
   transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(179, 80, 0, 0.8);
 }
 
 /* Page Content Styling */
@@ -99,54 +101,84 @@ button:hover {
   max-width: 900px;
   margin: 120px auto 40px auto;
   padding: 20px;
-  background: #fff3e6;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(160, 82, 45, 0.2);
   color: #4b2e05;
+  /* Removed white background for flow */
 }
 
+/* About Section text style */
 .page-content h1 {
   font-size: 2rem;
-  color: #a0522d;
+  color: #7e2f00;
   margin-bottom: 1rem;
 }
 
 .page-content p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  text-shadow: 0 0 2px #f0a46f;
+}
+
+/* Contact Form Styling */
+.page-content .contact-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 .page-content .contact-form input,
 .page-content .contact-form textarea {
   width: 100%;
-  padding: 12px;
-  margin-bottom: 16px;
-  border: 1px solid #cca678;
-  border-radius: 6px;
-  font-size: 1rem;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 2px solid #d35400;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 500;
   color: #4b2e05;
+  background: #fff8f0;
+  transition: border-color 0.3s ease;
+}
+
+.page-content .contact-form input:focus,
+.page-content .contact-form textarea:focus {
+  border-color: #a04000;
+  outline: none;
+  background: #fff;
+  box-shadow: 0 0 6px rgba(160, 64, 0, 0.4);
 }
 
 .page-content .contact-form button {
-  background-color: #a0522d;
-  color: white;
-  padding: 0.8rem 2rem;
+  background-color: #d35400;
+  color: #fff3e6;
+  padding: 14px 32px;
   border: none;
-  border-radius: 6px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-weight: 700;
+  font-size: 1.15rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 6px 15px rgba(160, 82, 45, 0.4);
 }
 
 .page-content .contact-form button:hover {
-  background-color: #7a401f;
+  background-color: #a04000;
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(160, 64, 0, 0.6);
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  color: #5c3a00;
+  color: #7e2f00;
   font-size: 0.9rem;
+  text-shadow: 0 0 3px #f0a46f;
 }
 
 /* Meet Our Tutors Section */
@@ -161,76 +193,126 @@ footer {
 .tutors-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #a0522d;
+  color: #7e2f00;
 }
 
-/* Tutors container: horizontal layout */
-.tutors-container {
+.tutor-cards {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: nowrap; /* keep horizontal, no wrapping */
-  margin-top: 20px;
+  gap: 40px;
+  flex-wrap: nowrap;
+  flex-direction: row;
 }
 
-/* Tutor card container */
 .tutor-card {
+  background: #000;
+  width: 350px;
+  height: 180px;
+  border-radius: 10px;
+  color: #f0a46f;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 350px; /* wider for horizontal picture */
-}
-
-/* Tutor photo: wide black horizontal box */
-.tutor-photo {
-  background: black;
-  width: 100%;
-  height: 150px; /* short and wide */
-  border-radius: 10px;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(243, 115, 88, 0.5);
 }
 
-/* Text under picture */
 .tutor-name {
-  font-size: 1rem; /* smaller */
+  margin-top: 12px;
+  font-size: 1rem;
   font-weight: 600;
-  color: #4b2e05;
-  margin-bottom: 6px;
+  color: #f97358;
   text-align: center;
+  text-shadow: 0 0 2px #7e2f00;
 }
 
-/* Tutor message (simple, no box, just below name) */
-.tutor-message {
-  font-size: 0.9rem;
-  color: #6a4b25;
+/* Ready to Get Started Section */
+.cta {
+  margin: 40px auto;
+  padding: 60px 20px;
+  max-width: 700px;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  background: linear-gradient(180deg, #f97358 0%, #f0a46f 70%, #f2c36b 100%);
+  box-shadow: inset 0 0 80px 15px rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background:
+    repeating-conic-gradient(
+      from 45deg,
+      rgba(255, 255, 255, 0.15) 0deg 15deg,
+      transparent 15deg 30deg
+    );
+  pointer-events: none;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  color: #7e2f00;
+  margin-bottom: 1rem;
+  font-weight: 800;
+  text-shadow: 0 0 5px #a04000;
+}
+
+.cta p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #6f2a00;
+  font-weight: 600;
+  text-shadow: 0 0 3px #d35400;
+}
+
+.cta-button {
+  padding: 14px 36px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  background: #7e2f00;
+  color: #fff3e6;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 6px 15px rgba(126, 47, 0, 0.6);
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.cta-button:hover {
+  background-color: #b35000;
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2rem;
-  }
-
-  .nav-links {
-    display: none; /* Optional hamburger menu in future */
-  }
-
-  .tutors-container {
+@media (max-width: 900px) {
+  .tutor-cards {
     flex-direction: column;
     align-items: center;
+    gap: 30px;
   }
 
   .tutor-card {
     width: 90%;
-    margin-bottom: 20px;
+    height: 180px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .cta h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  button, .cta-button {
+    font-size: 1rem;
+    padding: 12px 28px;
   }
 }

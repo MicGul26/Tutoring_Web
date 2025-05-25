@@ -1,14 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bright Minds Tutoring</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 <body>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
+  <header class="hero">
+    <nav class="navbar">
+      <h1 class="logo">Bright Minds</h1>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
     </nav>
-  
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple website created with VS Code.</p>
-    <button onclick="sayHello()">Click Me</button>
-  
-    <script src="script.js"></script>
-  </body>
-  
+    <div class="hero-text">
+      <h2>Empowering Students, One Session at a Time</h2>
+      <p>Expert tutoring in math, science, reading & more.</p>
+      <button onclick="bookSession()">Book a Free Session</button>
+    </div>
+  </header>
+
+  <section class="subjects">
+    <h3>What We Tutor</h3>
+    <div class="subject-cards">
+      <div class="card">📘 Math</div>
+      <div class="card">🧪 Science</div>
+      <div class="card">📖 Reading</div>
+      <div class="card">💻 Coding</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Bright Minds Tutoring. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,20 +1,105 @@
-form input, form textarea {
-    width: 300px;
-    padding: 10px;
-    font-size: 14px;
-  }
-  
-  form button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #2ecc71;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  form button:hover {
-    background-color: #27ae60;
-  }
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  line-height: 1.6;
+  background: #fdfdfd;
+  color: #333;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #6c63ff;
+  padding: 15px 30px;
+  color: white;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(135deg, #fce38a, #f38181);
+  padding: 80px 30px;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-text h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #fff;
+  color: #6c63ff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.subjects {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.subjects h3 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #6c63ff;
+}
+
+.subject-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 2px solid #6c63ff;
+  padding: 20px 40px;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+footer {
+  background-color: #6c63ff;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+}

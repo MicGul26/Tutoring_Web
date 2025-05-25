@@ -90,6 +90,49 @@ button:hover {
   transform: scale(1.05);
 }
 
+/* Page Content */
+.page-content {
+  padding: 100px 20px 40px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.page-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.page-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Page */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 0.75rem;
+  margin: 0.5rem auto;
+  border-radius: 10px;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+}
+
+.contact-form textarea {
+  resize: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .hero-text h1 {
@@ -97,6 +140,15 @@ button:hover {
   }
 
   .nav-links {
-    display: none; /* For now, you could add a hamburger menu later */
+    display: none; /* You can implement a hamburger menu here */
+  }
+
+  .page-content {
+    padding: 80px 10px 30px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
   }
 }

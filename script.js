@@ -1,4 +1,4 @@
 function sayHello() {
-    alert("Thanks for choosing BrightMind Tutoring! We'll help you succeed.");
+    alert("Thanks for choosing M.A.D. Tutoring! We'll help you succeed.");
   }
   

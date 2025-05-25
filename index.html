@@ -3,28 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BrightMind Tutoring</title>
+  <title>M.A.D. Tutoring</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
     <nav class="navbar">
-      <div class="logo">BrightMind</div>
+      <div class="logo">M.A.D. Tutoring</div>
       <div class="nav-links">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
     <section class="hero">
       <div class="hero-text">
         <h1>One-on-One Tutoring that Works</h1>
-        <p>Connect with expert tutors who care about your success.</p>
-        <button onclick="sayHello()">Get Started</button>
+        <p>Connect with expert tutors who care deeply about your success. Learn smarter, not harder!</p>
+        <button onclick="document.getElementById('tutors').scrollIntoView({behavior: 'smooth'});">Meet Our Tutors</button>
       </div>
     </section>
   </header>
+
+  <main>
+    <section id="tutors" class="tutors-section">
+      <h2>Our Expert Tutors</h2>
+      <div class="tutors-container">
+        <div class="tutor-card">
+          <div class="tutor-photo">Tutor 1 Photo</div>
+          <p class="tutor-name">Alex Johnson</p>
+          <p>Mathematics Specialist with a passion for problem solving.</p>
+        </div>
+        <div class="tutor-card">
+          <div class="tutor-photo">Tutor 2 Photo</div>
+          <p class="tutor-name">Briana Lee</p>
+          <p>Science Enthusiast dedicated to hands-on, real-world learning.</p>
+        </div>
+        <div class="tutor-card">
+          <div class="tutor-photo">Tutor 3 Photo</div>
+          <p class="tutor-name">Carlos Rivera</p>
+          <p>English & Writing Expert who helps students find their voice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Get Started?</h2>
+      <p>Book your personalized tutoring session now and start seeing results!</p>
+      <a href="contact.html" class="cta-button">Schedule a Session</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 M.A.D. Tutoring. Empowering minds, one session at a time.</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

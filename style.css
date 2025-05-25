@@ -1,3 +1,4 @@
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
@@ -5,101 +6,97 @@
 }
 
 body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #fdfdfd;
-  color: #333;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  color: #fff;
+  height: 100vh;
+  overflow-x: hidden;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #6c63ff;
-  padding: 15px 30px;
-  color: white;
+  padding: 1.2rem 2rem;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
-  font-weight: bold;
-}
-
-.hero {
-  background: linear-gradient(135deg, #fce38a, #f38181);
-  padding: 80px 30px;
-  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
   color: #fff;
 }
 
-.hero-text h2 {
-  font-size: 36px;
-  margin-bottom: 15px;
+.nav-links a {
+  margin-left: 2rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #000;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 80px;
+  text-align: center;
+}
+
+.hero-text {
+  max-width: 700px;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
 }
 
 .hero-text p {
-  font-size: 18px;
-  margin-bottom: 25px;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
 button {
-  padding: 12px 24px;
-  font-size: 16px;
-  background-color: #fff;
-  color: #6c63ff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #0077cc;
   border: none;
-  border-radius: 6px;
+  border-radius: 30px;
   cursor: pointer;
-  transition: 0.3s;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
 }
 
 button:hover {
-  background-color: #ddd;
-}
-
-.subjects {
-  padding: 40px 20px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.subjects h3 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #6c63ff;
-}
-
-.subject-cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #ffffff;
-  border: 2px solid #6c63ff;
-  padding: 20px 40px;
-  border-radius: 10px;
-  font-size: 20px;
-  transition: transform 0.2s;
-}
-
-.card:hover {
+  background: #0077cc;
+  color: white;
   transform: scale(1.05);
 }
 
-footer {
-  background-color: #6c63ff;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .nav-links {
+    display: none; /* For now, you could add a hamburger menu later */
+  }
 }

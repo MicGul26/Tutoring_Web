@@ -7,8 +7,8 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: #f4f4f4; /* Changed from bright gradient to soft grey */
-  color: #222; /* Changed from white to dark grey for better readability */
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* warm orange/red gradient */
+  color: #4b2e05; /* dark warm brown */
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -20,8 +20,8 @@ body {
   align-items: center;
   padding: 1.2rem 2rem;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.8);
-  border-bottom: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.85);
+  border-bottom: 1px solid #e0b089;
   position: fixed;
   width: 100%;
   top: 0;
@@ -31,19 +31,19 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #0077cc;
+  color: #662e00;
 }
 
 .nav-links a {
   margin-left: 2rem;
-  color: #0077cc;
+  color: #662e00;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #005999;
+  color: #a0522d;
 }
 
 /* Hero */
@@ -54,7 +54,7 @@ body {
   height: 100vh;
   padding-top: 80px;
   text-align: center;
-  background: #e0f0ff; /* Subtle background color for hero */
+  background: transparent;
 }
 
 .hero-text {
@@ -66,20 +66,22 @@ body {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
-  color: #0077cc;
+  color: #fff3e6;
+  text-shadow: 1px 1px 4px #a0522d;
 }
 
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
-  color: #333;
+  color: #ffe4c4;
+  text-shadow: 1px 1px 3px #7a401f;
 }
 
 button {
   padding: 0.8rem 2rem;
   font-size: 1rem;
-  background: #0077cc;
-  color: #fff;
+  background: #a0522d;
+  color: #fff3e6;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -88,7 +90,7 @@ button {
 }
 
 button:hover {
-  background: #005999;
+  background: #7a401f;
   transform: scale(1.05);
 }
 
@@ -97,15 +99,15 @@ button:hover {
   max-width: 900px;
   margin: 120px auto 40px auto;
   padding: 20px;
-  background: #fff;
+  background: #fff3e6;
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  color: #333;
+  box-shadow: 0 4px 12px rgba(160, 82, 45, 0.2);
+  color: #4b2e05;
 }
 
 .page-content h1 {
   font-size: 2rem;
-  color: #0077cc;
+  color: #a0522d;
   margin-bottom: 1rem;
 }
 
@@ -120,14 +122,14 @@ button:hover {
   width: 100%;
   padding: 12px;
   margin-bottom: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #cca678;
   border-radius: 6px;
   font-size: 1rem;
-  color: #333;
+  color: #4b2e05;
 }
 
 .page-content .contact-form button {
-  background-color: #0077cc;
+  background-color: #a0522d;
   color: white;
   padding: 0.8rem 2rem;
   border: none;
@@ -137,13 +139,13 @@ button:hover {
 }
 
 .page-content .contact-form button:hover {
-  background-color: #005999;
+  background-color: #7a401f;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  color: #777;
+  color: #5c3a00;
   font-size: 0.9rem;
 }
 
@@ -153,40 +155,63 @@ footer {
   margin: 40px auto;
   padding: 20px;
   text-align: center;
+  color: #4b2e05;
 }
 
 .tutors-section h2 {
   font-size: 2rem;
   margin-bottom: 20px;
-  color: #0077cc;
+  color: #a0522d;
 }
 
-.tutor-cards {
+/* Tutors container: horizontal layout */
+.tutors-container {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 20px;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: nowrap; /* keep horizontal, no wrapping */
+  margin-top: 20px;
 }
 
+/* Tutor card container */
 .tutor-card {
-  background: #ccc;
-  width: 300px;
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px; /* wider for horizontal picture */
+}
+
+/* Tutor photo: wide black horizontal box */
+.tutor-photo {
+  background: black;
+  width: 100%;
+  height: 150px; /* short and wide */
+  border-radius: 10px;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
-  font-weight: 600;
-  border-radius: 10px;
-  color: #444;
-  position: relative;
-}
-
-.tutor-name {
-  margin-top: 10px;
+  color: white;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #333;
+}
+
+/* Text under picture */
+.tutor-name {
+  font-size: 1rem; /* smaller */
+  font-weight: 600;
+  color: #4b2e05;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+/* Tutor message (simple, no box, just below name) */
+.tutor-message {
+  font-size: 0.9rem;
+  color: #6a4b25;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 /* Responsive */
@@ -199,12 +224,13 @@ footer {
     display: none; /* Optional hamburger menu in future */
   }
 
-  .tutor-cards {
+  .tutors-container {
     flex-direction: column;
     align-items: center;
   }
 
   .tutor-card {
     width: 90%;
+    margin-bottom: 20px;
   }
 }

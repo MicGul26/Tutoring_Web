@@ -1,0 +1,20 @@
+form input, form textarea {
+    width: 300px;
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  form button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #27ae60;
+  }
+  

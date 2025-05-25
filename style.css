@@ -7,9 +7,9 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
-  color: #fff;
-  height: 100vh;
+  background: #f4f4f4; /* Changed from bright gradient to soft grey */
+  color: #222; /* Changed from white to dark grey for better readability */
+  min-height: 100vh;
   overflow-x: hidden;
 }
 
@@ -20,8 +20,8 @@ body {
   align-items: center;
   padding: 1.2rem 2rem;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #ddd;
   position: fixed;
   width: 100%;
   top: 0;
@@ -31,19 +31,19 @@ body {
 .logo {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #fff;
+  color: #0077cc;
 }
 
 .nav-links a {
   margin-left: 2rem;
-  color: #fff;
+  color: #0077cc;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s;
 }
 
 .nav-links a:hover {
-  color: #000;
+  color: #005999;
 }
 
 /* Hero */
@@ -54,6 +54,7 @@ body {
   height: 100vh;
   padding-top: 80px;
   text-align: center;
+  background: #e0f0ff; /* Subtle background color for hero */
 }
 
 .hero-text {
@@ -65,18 +66,20 @@ body {
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: #0077cc;
 }
 
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  color: #333;
 }
 
 button {
   padding: 0.8rem 2rem;
   font-size: 1rem;
-  background: #ffffff;
-  color: #0077cc;
+  background: #0077cc;
+  color: #fff;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -85,52 +88,105 @@ button {
 }
 
 button:hover {
-  background: #0077cc;
-  color: white;
+  background: #005999;
   transform: scale(1.05);
 }
 
-/* Page Content */
+/* Page Content Styling */
 .page-content {
-  padding: 100px 20px 40px;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 900px;
+  margin: 120px auto 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  color: #333;
 }
 
 .page-content h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
+  color: #0077cc;
   margin-bottom: 1rem;
 }
 
 .page-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  line-height: 1.6;
 }
 
-/* Contact Page */
-.contact-form input,
-.contact-form textarea {
+.page-content .contact-form input,
+.page-content .contact-form textarea {
   width: 100%;
-  max-width: 500px;
-  padding: 0.75rem;
-  margin: 0.5rem auto;
-  border-radius: 10px;
-  border: none;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   font-size: 1rem;
   color: #333;
 }
 
-.contact-form textarea {
-  resize: none;
+.page-content .contact-form button {
+  background-color: #0077cc;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-/* Footer */
+.page-content .contact-form button:hover {
+  background-color: #005999;
+}
+
 footer {
   text-align: center;
-  padding: 1.5rem 1rem;
+  padding: 20px;
+  color: #777;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Meet Our Tutors Section */
+.tutors-section {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.tutors-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0077cc;
+}
+
+.tutor-cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tutor-card {
+  background: #ccc;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 10px;
+  color: #444;
+  position: relative;
+}
+
+.tutor-name {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
 }
 
 /* Responsive */
@@ -140,15 +196,15 @@ footer {
   }
 
   .nav-links {
-    display: none; /* You can implement a hamburger menu here */
+    display: none; /* Optional hamburger menu in future */
   }
 
-  .page-content {
-    padding: 80px 10px 30px;
+  .tutor-cards {
+    flex-direction: column;
+    align-items: center;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 0.95rem;
+  .tutor-card {
+    width: 90%;
   }
 }

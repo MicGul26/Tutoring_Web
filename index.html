@@ -127,5 +127,15 @@
   <footer>
     <p>&copy; 2025 M.A.D. Tutoring. Empowering minds, one session at a time.</p>
   </footer>
+
+  <script>
+    if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+      document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', () => {
+          card.classList.toggle('flip');
+        });
+      });
+    }
+  </script>
 </body>
 </html>

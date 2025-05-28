@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>M.A.D. Tutoring</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
@@ -11,77 +11,121 @@
   <nav class="navbar">
     <div class="logo">M.A.D. Tutoring</div>
     <div class="nav-links">
-      <button class="nav-btn" onclick="scrollToSection('about')">About Us</button>
-      <button class="nav-btn" onclick="scrollToSection('tutors')">Meet Our Tutors</button>
-      <button class="nav-btn" onclick="scrollToSection('get-started')">Get Started</button>
-      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="#about">About Us</a>
+      <a href="#tutors">Meet Our Tutors</a>
+      <a href="#get-started">Get Started</a>
     </div>
   </nav>
 
-  <header class="hero">
+  <section class="hero">
     <div class="hero-text">
-      <h1>One-on-One Tutoring that Works</h1>
-      <p>Connect with expert tutors who care deeply about your success. Learn smarter, not harder!</p>
+      <h1>Welcome to M.A.D. Tutoring</h1>
+      <p>Unlock your academic potential with personalized tutoring designed to help you excel.</p>
       <div class="hero-buttons">
-        <button onclick="scrollToSection('about')">About Us</button>
-        <button onclick="scrollToSection('tutors')">Meet Our Tutors</button>
-        <button onclick="scrollToSection('get-started')">Get Started</button>
+        <button onclick="document.getElementById('about').scrollIntoView({ behavior: 'smooth' });">About Us</button>
+        <button onclick="document.getElementById('tutors').scrollIntoView({ behavior: 'smooth' });">Meet Our Tutors</button>
+        <button onclick="document.getElementById('get-started').scrollIntoView({ behavior: 'smooth' });">Get Started</button>
       </div>
     </div>
-  </header>
+  </section>
 
-  <main>
-
-    <section id="about" class="about-section">
-      <h2>What We Tutor & Why Choose Us</h2>
-      <p>
-        At M.A.D. Tutoring, we specialize in Calculus, Algebra, Computer Science, and Sciences like Physics, Biology, and Chemistry.
-        Our expert tutors provide personalized guidance that helps you build confidence and master complex concepts.
-        What sets us apart is our passion for your success — you get tailored sessions designed for your learning style, practical problem-solving skills, and continuous improvement.
-        Join us and unlock your full potential with fun, engaging lessons that make learning an exciting journey.
-      </p>
-    </section>
-
-    <section id="tutors" class="tutors-section">
-      <h2>Our Expert Tutors</h2>
-      <div class="tutor-cards">
-        <div class="tutor-card">
-          <div class="tutor-photo"> </div>
-          <div class="tutor-info">
-            <p>Hello, I’m Michael Guller!</p>
-          </div>
-        </div>
-        <div class="tutor-card">
-          <div class="tutor-photo"> </div>
-          <div class="tutor-info">
-            <p>Hi, I’m Danny Guller!</p>
-          </div>
-        </div>
-        <div class="tutor-card">
-          <div class="tutor-photo"> </div>
-          <div class="tutor-info">
-            <p>Hey there, I’m Alex Guller!</p>
+  <section id="about" class="about-section">
+    <h2>What We Teach</h2>
+    <div class="flip-card-container">
+      <!-- Math -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Math</div>
+          <div class="flip-card-back">
+            <ul>
+              <li>Algebra</li>
+              <li>Calculus
+                <ul>
+                  <li>Calc 1</li>
+                  <li>Calc 2</li>
+                  <li>Calc 3</li>
+                </ul>
+              </li>
+              <li>Linear Algebra</li>
+              <li>Differential Equations</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
+      <!-- Science -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Science</div>
+          <div class="flip-card-back">
+            <ul>
+              <li>Biology</li>
+              <li>Chemistry
+                <ul>
+                  <li>General Chemistry</li>
+                </ul>
+              </li>
+              <li>Physics
+                <ul>
+                  <li>Mechanics</li>
+                  <li>Electricity and Magnetism</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Computer Science -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">Computer Science</div>
+          <div class="flip-card-back">
+            <ul>
+              <li>AP CS Principles</li>
+              <li>AP CS A (Algorithms)</li>
+              <li>Data Structures & Algorithms</li>
+              <li>(Python, Java, C)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- SAT/ACT -->
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">SAT / ACT</div>
+          <div class="flip-card-back">
+            <p>We specialize in the Math section and help students boost their scores to reach top universities with confidence and clarity.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section id="get-started" class="get-started-section">
-      <h2>Ready to Get Started?</h2>
-      <p>Book your personalized tutoring session now and start seeing results!</p>
-      <button onclick="window.location.href='contact.html'">Schedule a Session</button>
-    </section>
+  <section id="tutors" class="tutors-section">
+    <h2>Our Expert Tutors</h2>
+    <div class="tutor-cards">
+      <div class="tutor-card">
+        <div class="tutor-photo"></div>
+        <div class="tutor-info">Michael Guller</div>
+      </div>
+      <div class="tutor-card">
+        <div class="tutor-photo"></div>
+        <div class="tutor-info">Danny Guller</div>
+      </div>
+      <div class="tutor-card">
+        <div class="tutor-photo"></div>
+        <div class="tutor-info">Alex Guller</div>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <section id="get-started" class="get-started-section">
+    <h2>Ready to Start?</h2>
+    <p>Contact us today and begin your journey toward academic excellence.</p>
+    <a href="contact.html"><button>Contact Us</button></a>
+  </section>
 
   <footer>
     <p>&copy; 2025 M.A.D. Tutoring. Empowering minds, one session at a time.</p>
   </footer>
-
-  <script>
-    function scrollToSection(id) {
-      document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
